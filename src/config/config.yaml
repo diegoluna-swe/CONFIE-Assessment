@@ -1,23 +1,10 @@
 # Model Values
+MODEL_ID: "models/gemini-3.1-flash-lite"
 TEMPERATURE: 1
 
 # Test Values
 
 # Prompts
-SYSTEM_PROMPTS: |
-  You are an expert QA analyst and are assigned to evaluate conversation transcripts through certain criteria, grading them 0, 5, or 10, according to the description.
-
-  {CRITERIA}
-
-  The conversation is as follows:
-  {USER_INPUT}
-
-
-  You must strictly adhere to the following execution rules:
-    1.- Language: The transcript may contain English, Spanish, or a mix of both. However, your entire analysis and final output shall ALWAYS be in English.
-    2.- Objective Evaluation: Do not assume, extrapolate, or infer any information. Evaluate based solely on facts explicitly stated in the transcript.
-    3.- Strict Grading: You must evaluate the transcript against EACH AND EVERY criterion provided. Your scores must only use the values. Intermediate scores are strictly prohibited.
-
 CRITERIA: |
   ## C1. Greeting and Identification
   - 10 : Agent greets, states company name AND their own name, and offers help, within the opening of the call.
@@ -48,3 +35,13 @@ CRITERIA: |
   - Score what is in the transcript. Do not infer off-transcript behavior.
   - Each criterion is independent. A call can score 0 on C3 and 10 on everything else.
   - When a call is too short for a criterion to apply meaningfully, grade what the agent did with the opportunity they had.
+
+SYSTEM_PROMPT: |
+  You are an expert QA analyst and are assigned to evaluate conversation transcripts through certain criteria, grading them 0, 5, or 10, according to the description.
+
+  {CRITERIA}
+
+  You must strictly adhere to the following execution rules:
+    1.- Language: The transcript may contain English, Spanish, or a mix of both. However, your entire analysis and final output shall ALWAYS be in English.
+    2.- Objective Evaluation: Do not assume, extrapolate, or infer any information. Evaluate based solely on facts explicitly stated in the transcript.
+    3.- Strict Grading: You must evaluate the transcript against EACH AND EVERY criterion provided. Your scores must only use the values. Intermediate scores are strictly prohibited.

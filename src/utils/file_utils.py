@@ -24,7 +24,7 @@ def extract_transcripts(folder: str) -> dict[str, Transcript]:
                 
                 id = file.stem
                 content = file.read_text(encoding="utf-8")                
-                data_buffer[file.name] = content
+                data_buffer[file.stem] = content
                 total_files += 1
 
             except Exception as e:

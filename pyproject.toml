@@ -1,0 +1,21 @@
+[tool.poetry]
+package-mode = false
+
+[project]
+name = "confie"
+version = "0.1.0"
+description = "Coding assessment for CONFIE Jr. AI Engineer"
+authors = [
+    {name = "diegoluna-swe",email = "diego.s.luna18@gmail.com"}
+]
+requires-python = ">=3.13"
+dependencies = [
+    "google-genai",
+    "pydantic",
+    "pyyaml",
+    "python-dotenv"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
