@@ -1,0 +1,14 @@
+# Assessment files
+brief.md
+labels.csv
+rubric.md
+
+# Environment variables
+.env
+
+# Results
+/results
+*results/
+
+# Python
+__pycache__/
