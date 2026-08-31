@@ -31,3 +31,15 @@ This was the part where I got a bit of trouble because I had to change the routi
 # Everything else [3 hrs 40 mins in]
 
 The last 20 minutes I've used to write the findings, manually analyze the evaluations made by the model and the human side, etc.
+
+# What would I do with one more day
+
+With more time to develop the application I would:
+
+- Probably add an interface or at least more prints that would guide the user, and that allowed to check and override the scores if required.
+- Test the program with bigger batches of transcripts / stress testing.
+- Test multiple models to see which one fits the best.
+- Train the model to get better results, being careful of not overfitting it (this would probably take some time though).
+- Clean the code a bit, so I could move the writing of results to a function on the file_utils.
+- Give it a COT type of structure so it would rethink what it is writing with its own answer, but checking that it doesn't use too much tokens.
+- If it's gonna be a tool used by the employees I would try to add some logging of how many tokens are being used, to keep track of the expense.
