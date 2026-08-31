@@ -1,9 +1,5 @@
 # Environment variables
 .env
 
-# Results
-/results
-*results/
-
 # Python
 __pycache__/
